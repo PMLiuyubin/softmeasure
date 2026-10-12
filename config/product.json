@@ -1,0 +1,74 @@
+{
+  "version": "2026-10-12.1",
+  "grid_minutes": 15,
+  "steady": {
+    "window_points": 8,
+    "min_points": 6,
+    "thresholds": {
+      "F": 0.030916730567718587,
+      "R": 0.2620847457237346,
+      "S": 0.06599292470048371,
+      "D": 0.001888473151855306,
+      "Tside": 0.2761580750421882,
+      "Ttop": 0.4607133258113828,
+      "Tbot": 0.2648537685536908
+    },
+    "fit_note": "资料目录 15 分钟滚动标准差的中位。在线使用这些数，不再重估。"
+  },
+  "step": {
+    "quantile": 0.95,
+    "min_gap_hours": 4,
+    "path_horizons_min": [
+      30,
+      60,
+      120,
+      240
+    ],
+    "thresholds_tph": {
+      "F": 0.1394547462463369,
+      "R": 0.8383307456970215,
+      "S": 0.2618982791900637,
+      "D": 0.10402255356311793
+    }
+  },
+  "nir_content": {
+    "column": "组分甲基萘",
+    "center_pct": 66.3625,
+    "slow_window_points": 24,
+    "slow_band_pct": 1.0,
+    "jump_quantile": 0.99,
+    "jump_abs_pct": 1.5123719999999947
+  },
+  "xcorr": {
+    "max_lag_min": 360,
+    "step_min": 15,
+    "min_pairs": 80,
+    "clear_abs_r": 0.25,
+    "clear_min_lag_min": 30,
+    "clear_gain": 0.05
+  },
+  "slope_reference": {
+    "R0": 6.53,
+    "S0": 3.85,
+    "lock_R": 0.59,
+    "lock_S": -2.4,
+    "lock_base": 67.55,
+    "note": "锁定式不由算子改写"
+  },
+  "pid": {
+    "realtime_enabled": false,
+    "sat_high": 95,
+    "sat_low": 5,
+    "min_sat_points": 4,
+    "point_hours": 0.25,
+    "osc_window_points": 8,
+    "osc_min_flips": 6,
+    "osc_deadband": 1
+  },
+  "fusion": {
+    "green": 0.5,
+    "pink": 0.5,
+    "note": "模型外权重，未在验收窗上标定"
+  },
+  "realtime_infer_enabled": false
+}
